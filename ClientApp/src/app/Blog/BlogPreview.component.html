@@ -1,0 +1,39 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{blog.name}}</h1>
+          
+          <span class="meta">
+            Posted by
+            <a href="#">Start Bootstrap</a>
+            on {{ blog.datePublished}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>
+          {{blog.content}}
+        </p>
+
+        <!--<a class="btn btn-danger float-right" [routerLink]="['blog/edit/blog.id']">Edit</a>-->
+
+      </div>
+      <a class="btn btn-primary mt-4" [routerLink]="['../edit/',blog.id]">Edit</a>
+    </div>
+  </div>
+</article>
+
+<hr>
+

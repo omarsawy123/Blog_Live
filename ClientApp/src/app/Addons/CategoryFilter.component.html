@@ -1,0 +1,17 @@
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input class="custom-control-input" type="radio" id="All" name="options" value="All" [(ngModel)]="currentSelectedOption" (change)="OnOptionChanged()">
+  <label class="custom-control-label" for="All">All ({{All}})</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="Technology" name="options" class="custom-control-input" value="Technology" [(ngModel)]="currentSelectedOption" (change)="OnOptionChanged()">
+  <label class="custom-control-label" for="Technology">Technology ({{Technology}})</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="Software" name="options" class="custom-control-input" value="Software" [(ngModel)]="currentSelectedOption" (change)="OnOptionChanged()">
+  <label class="custom-control-label" for="Software">Software ({{Software}})</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="Hardware" name="options" class="custom-control-input" value="Hardware" [(ngModel)]="currentSelectedOption" (change)="OnOptionChanged()">
+  <label class="custom-control-label" for="Hardware">Hardware ({{Hardware}})</label>
+</div>

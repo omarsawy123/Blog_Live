@@ -1,0 +1,51 @@
+<!-- PageHeader -->
+<header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--CategoryFilter-->
+<div class="container mb-5" style="text-align:center; font-size:120%;">
+  <categoryfilter *ngIf="blogs" [All]="getAll()"
+                  [Technology]="getTechno()"
+                  [Software]="getSoftware()"
+                  [Hardware]="getHardware()"
+                  (OptionChanged)="OnOptionChanged($event)"></categoryfilter>
+</div>
+<!--BLogsList-->
+<div  class="container">
+  <div class="row">
+    <div *ngIf="blogs" class="col-lg-8 col-md-10 mx-auto">
+      <ng-container *ngFor="let blog of blogs ">
+        <div class="post-preview" *ngIf="currentSelectedOption=='All' || currentSelectedOption==blog.category">
+          <a [routerLink]="['/blog',blog.id]" >
+            <h2 class="post-title">
+                {{blog.name}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{blog.category}}
+            </h3>
+          </a>
+          <p class="post-meta">
+            Posted by
+            <a href="#">Author</a>
+            on {{blog.datePublished}}
+          </p>
+          <hr>
+        </div>
+
+      </ng-container>
+    </div>
+    <div *ngIf="!blogs">
+      <h3>Loading....</h3>
+    </div>
+  </div>
+</div>

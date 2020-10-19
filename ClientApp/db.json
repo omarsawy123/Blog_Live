@@ -1,0 +1,36 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "name":"First Blog",
+      "AuthorId":"1",
+      "datePublished":"10/10/2020",
+      "content":"First Blog Content",
+      "category":"Software"
+    },
+    {
+      "id": "2",
+      "name":"Second Blog",
+      "AuthorId":"2",
+      "datePublished":"10/10/2020",
+      "content":"Second Blog Content",
+      "category":"Hardware"
+    },
+    {
+      "id": "3",
+      "name":"Third Blog",
+      "AuthorId":"3",
+      "datePublished":"10/10/2020",
+      "content":"Third Blog Content",
+      "category":"Technology"
+    },
+    {
+      "id": "4",
+      "name":"Fourth Blog",
+      "AuthorId":"4",
+      "datePublished":"10/10/2020",
+      "content":"Fourth Blog Content",
+      "category":"Software"
+    }
+  ]
+}
